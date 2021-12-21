@@ -1,9 +1,12 @@
 
 #define MAX 10
 
+#define TRUE 1
+#define FALSE 0
+
 typedef struct _lista_texto {
   char *v[MAX];
-  int ultimo;
+  int quantidade;
 } ListaTexto;
 
 ListaTexto * cria_lista();
@@ -25,4 +28,5 @@ int buscar_lista(ListaTexto *l, char *buscado);
 // remove um elemento da lista e retorna ele ou NULL caso a posição não exista na lista
 char * remover_lista(ListaTexto *l, int posicao);
 
+// imprime a lista para que possamos verificar o seu estado atual
 void imprimir_lista(ListaTexto *l);
